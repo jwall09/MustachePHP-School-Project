@@ -1,0 +1,317 @@
+/********************* 
+Name: Jacob
+Coding 06
+Purpose: Styling for the differnt templates of the home page.
+This will stylize all the differnt parts of the webpage.
+**********************/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+ 
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+	font-family: "DM Sans", sans-serif;
+	background-color: #e2e7fa;
+    overflow-x: hidden;
+}
+
+.page-container {
+    position: relative;
+}
+
+/***** HEADER *****/
+
+.container-2 {
+    z-index: 5;
+    position: relative;
+    width: 40vw;
+    margin: auto;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+
+.card-2 {
+	margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	background-color: #FFF;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px 0 rgba(#999, .25);
+}
+
+.card-image-2 {
+    border-radius: 8px;
+	overflow: hidden;
+	padding-bottom: 65%;
+	background-image: url("/images/toppic.jpg");
+	background-repeat: no-repeat;
+	background-size: 150%;
+	background-position: 0 5%;
+	position: relative;
+}
+
+.card-heading-2 {
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+	text-align: center;
+  	position: absolute;
+	font-size: 1.3rem;
+	font-weight: 700;
+    line-height: 2rem;
+}
+
+/***** BODY *****/
+
+.tm-button {
+    position: relative;
+    padding: 10px 25px;
+    text-align: center;
+    cursor: pointer;
+    font: inherit;
+	font-size: 1.25rem;
+	padding: 1em;
+	width: auto;
+	font-weight: 500;
+	background-color: #6658d3;
+	border-radius: 6px;
+	color: #FFF;
+	border: 0;
+}
+  
+.tm-button:hover {
+	background-color: black;
+    color: #6658d3;
+}
+
+/***** FOOTER *****/
+footer{
+    position: relative;
+    bottom: 0;
+    background: rgb(58, 58, 58);
+    height: 100px;
+    width: 100%;
+    color: #fff;
+    padding: 1em;
+    z-index: 1;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+
+/********** NAV CONTAINER *************/
+
+nav{
+    color: #fff;
+    height: 5rem;
+    width: 100vw;
+    background: rgb(58, 58, 58);
+    display: flex;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /*Styling logo*/
+  .logo{
+    padding:1rem;
+    text-align: center;
+  }
+  
+  .logo img {
+    height: 4rem;
+    width: 4rem;
+  }
+  
+  /*Styling Links*/
+  .nav-links{
+    color: #fff;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    list-style: none; 
+    width: 88vw;
+    padding: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .nav-links li a{
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-links li a:hover {
+    color: rgb(153, 67, 153);
+  }
+  
+  .nav-links li {
+    color: #fff;
+    position: relative;
+  }
+  
+  .nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+  }
+  
+  /*Styling Hamburger Icon*/
+  .hamburger div{
+    width: 30px;
+    height:3px;
+    background: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger{
+    display: none;
+  }
+  
+  /*Animating Hamburger Icon on Click*/
+  .toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+  }
+  
+  .toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+  }
+  
+  .toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+  }
+
+/****************** MEDIA QUERY *****************/
+  @media (max-width:800px) {
+
+    /**** HERO-IMG ****/
+    .container-2 {
+        margin: 0;
+    }
+
+    .card-2 {
+        min-width: 100vw;
+    }
+
+    .card-image-2 {
+        width: 100%;
+    }
+
+    /**** FOOTER ****/
+    .footer-menu ul{
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding: 1em;
+    }
+
+
+
+  /*** NAVBAR ***/
+  nav{
+    position: relative;
+    z-index: 10;
+  }
+
+  .hamburger{
+      display:block;
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+      transition: all 0.7s ease;
+  }
+
+  .nav-links{
+      position: fixed;
+      background: rgb(58, 58, 58);
+      height: 50vh;
+      width: 100%;
+      flex-direction: column;
+      clip-path: circle(50px at 95% -50%);
+      -webkit-clip-path: circle(50px at 95% -50%);
+      transition: all 1s ease-out;
+      pointer-events: none;
+  }
+
+  .nav-links.open{
+      clip-path: circle(1000px at 90% -10%);
+      -webkit-clip-path: circle(1000px at 90% -10%);
+      pointer-events: all;
+  }
+  
+  .nav-links li{
+      opacity: 0;
+  }
+
+  .nav-links li:nth-child(1){
+      transition: all 0.5s ease 0.2s;
+  }
+
+  .nav-links li:nth-child(2){
+      transition: all 0.5s ease 0.4s;
+  }
+
+  .nav-links li:nth-child(3){
+      transition: all 0.5s ease 0.6s;
+  }
+
+  .nav-links li:nth-child(4){
+      transition: all 0.5s ease 0.7s;
+  }
+
+  .nav-links li:nth-child(5){
+      transition: all 0.5s ease 0.8s;
+  }
+
+  .nav-links li:nth-child(6){
+      transition: all 0.5s ease 0.9s;
+      margin: 0;
+  }
+
+  .nav-links li:nth-child(7){
+      transition: all 0.5s ease 1s;
+      margin: 0;
+  }
+
+  li.fade{
+      opacity: 1;
+  }
+
+
+
+
+}
+

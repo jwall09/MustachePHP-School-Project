@@ -1,0 +1,47 @@
+<!-- -------------------
+Name: Jacob
+Coding 06
+Purpose: Making the contact form template for the use on the home page.
+------------------- -->
+<div class="container">  
+    <div class="card">
+        <div id="msg"> 
+            <!-- This is a blank area for us to talk to the use -->
+            <br>
+        </div>          
+        <div class="card-image">	
+            <h2 class="card-heading">
+             Contact Us 
+            </h2>
+        </div>              
+        <form id="email-form" name="email-form" action="/php/email.php" method="post">
+            <div class="input">
+                <input type="text" class="input-field" id="name" name="name" maxlength="64"/>
+                <label for="input" class="input-label">Name</label>
+            </div>
+            <div class="input">
+                <input type="text" class="input-field" id="email" name="email" maxlength="64"/>
+                <label for="input" class="input-label">Email</label>
+            </div>
+            <div class="input">
+                <input type="text" class="input-field" id="from" name="from" maxlength="64"/>
+                <label for="input" class="input-label">Re-enter Email</label>
+            </div>
+            <div class="input">
+                <input type="text" class="input-field" id="subject" name="subject" maxlength="64"/>
+                <label for="input" class="input-label">Subject</label>
+            </div>
+            <div class="input">
+                <textarea class="textinput" id="message" placeholder="Message" rows="10" cols="10"></textarea>
+            </div>
+            <div class="action">
+                <button id="submitBtn" type="button" class="action-button">Send</button>
+                <button id="clearBtn" type="button" class="clear-button">Clear</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/contact.js"></script>
+  
